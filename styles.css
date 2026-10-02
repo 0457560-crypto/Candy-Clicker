@@ -2,13 +2,14 @@ body{
     text-align: center;
 }
 
-
+/*These colors are see through...almost greyed out*/
 .too-broke{
     background-color: rgba(113, 37, 255, 0.2);
     color:rgba(0, 0, 0, 0.2);
     border: 0;
 }
 
+/*These colors are brighter*/
 .not-broke{
     background-color: rgb(113, 37, 255);
     color:rgb(0, 0, 0);

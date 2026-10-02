@@ -2,12 +2,11 @@
 const candyBtn = document.getElementById("candy-btn")
 
 
-//variables
+//variables. we're also going to 
 let totalCandy = 0;
 
 
 let candyPerClick = 1
-
 
 let clickUpgradeCost = 25;
 
@@ -26,7 +25,6 @@ clickUpgradeBtn.addEventListener("click", buyClickUpgrade)
 function addCandy(){
    
 }
-
 
 //check to see if we can buy an upgrade, so we can grey out or brighten purchase button. adds or removes special css classes
 function canUserIncreaseClick(){

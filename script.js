@@ -1,6 +1,6 @@
 //constants, values that will not change
 const candyBtn = document.getElementById("candy-btn")
-const upgradeClickBtn = document.getElementById("upgrade-click-button")
+const upgradeClickBtn = document.getElementById("upgrade-click-btn")
 
 
 //variables. we're also going to 
@@ -25,8 +25,8 @@ upgradeClickBtn.addEventListener("click", buyClickUpgrade)
 
 //function that adds candy to our total based on candy/click number, so long as we have less than 5000 candies
 function addCandy(){
-    totalCandy += 1
-    visCandy = `Candies: ${totalCandy}`
+    totalCandy += candyPerClick
+    visCandy.innerHTML = "Candies: " + totalCandy
 }
 
 //check to see if we can buy an upgrade, so we can grey out or brighten purchase button. adds or removes special css classes
@@ -36,4 +36,12 @@ function canUserIncreaseClick(){
 
 //buy a click upgrade if we have enough coins. also used Math.trunc to remove pesky decimals
 function buyClickUpgrade(){
+    if (totalCandy >= clickUpgradeCost){
+        totalCandy -= clickUpgradeCost
+        visCandy.innerHTML = totalCandy
+        candyPerClick = clickUpgradeCost
+        visCandyToClick.innerHTML = "Candies/Click: " + candyPerClick
+        clickUpgradeCost = Math.round(clickUpgradeCost *= 1.5)
+        upgradeClickBtn.innerHTML = " -> Increase You Candies Per Click <-| " + clickUpgradeCost
+    }
 }

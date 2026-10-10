@@ -2,6 +2,14 @@ body{
     text-align: center;
 }
 
+.emph1{
+    color:#AA77AA
+}
+
+.emph2{
+    color:#88BC88
+}
+
 /*These colors are see through...almost greyed out*/
 .too-broke{
     background-color: rgba(113, 37, 255, 0.2);
